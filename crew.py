@@ -1,41 +1,44 @@
-defuser = "Crew"
-defkey = "Crew was here"
+defuser = "Crew" 
+defkey = "CrewWas"
 
 while (True):
-    print("Hesabınız varmı (v/y)?")
+    print("Hesabınız varmı? (var/yok)")
     cevap = input( )
-    if (cevap == "v"):
+    if (cevap == "var"):
         user = input("E-posta :")
-        key = input("Şifrenizi girin :")
+        key = input("Şifre :")
         
         if (defuser == user) and (key == defkey):
-            print("👍 Giriş başarılı.")
+            print("Hesaba başarılı bir şekilde erişim sağlandı.")
             break
         elif (defuser != user) and (key == defkey):
-            print("Hatalı kullanıcı adı.")
-            print("Kullanıcı adınızı değiştirmek istermisiniz(e/h)")
+            print("Bu mail adresi sistemde kayıtlı değil.")
+            print("G-mail adresinizi değiştirmek istermisiniz? (evet/hayır)")
             cevapa = input( )
-            if (cevapa == "e"):
-                degisuser = input("Yeni kullanıcı adınızı girin :")
+            if (cevapa == "evet"):
+                print("Lütfen bekleyin...")
+                degisuser = input("G-mail adresi belirtin. :")
+                print("Lütfen bekleyin...")
                 defuser = degisuser
-                print("Başarılı!")
+                print("Başarılı bir şekilde sistemdeki mail adresiniz değişti yeni mail adresi " + degisuser)
         elif (defuser == user) and (key != defkey):
-            print("Hatalı şifre.")
-            print("Şifrenizi değiştirmek istermisimiz(E/H")
+            print("Girdiğiniz şifre sistemde kayıtlı değil.")
+            print("şifrenizi değiştirmek istermisiniz? (evet/hayır)")
             cevapb = input( )
-            if (cevapb == "e"):
+            if (cevapb == "evet"):
                     print("Lütfen bekleyin...")
                     yenikey = input("Yeni şifrenizi girin :")
                     print("Lütfen bekleyin...")
                     defkey = yenikey
-                    print("Başarılı.")
+                    print("Başarıyla sistemdeki şifreniz değişti " + yenikey)
                     
     elif (cevap == "y"):
-        yeniusr = input("Kullanıcı adı belirleyiniz :")
+        yeniusr = input("Bir G-mail belirtiniz.")
         defuser = yeniusr
-        yeniusrkey = input("Şifre belirleyiniz :")
+        yeniusrkey = input("Bir şifre belirtiniz. (8 Karakterli)")
         defkey = yeniusrkey
-        print("Hesabınız başarıyla oluşturuldu!")
-        
+        print("Sisteme başarılı bir şekilde kayıt oldunuz.")
+        print('Mail :' + yeniusr)
+        print('Şifre :' + yeniusrkey)
     else:
-        print("Hatalı giriş.")
+        print("Sisteme giriş yapamadınız.")
