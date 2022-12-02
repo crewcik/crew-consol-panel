@@ -32,7 +32,7 @@ while (True):
                     defkey = yenikey
                     print("Başarıyla sistemdeki şifreniz değişti " + yenikey)
                     
-    elif (cevap == "y"):
+    elif (cevap == "yok"):
         yeniusr = input("Bir G-mail belirtiniz.")
         defuser = yeniusr
         yeniusrkey = input("Bir şifre belirtiniz. (8 Karakterli)")
